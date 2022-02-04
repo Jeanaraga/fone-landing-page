@@ -7,9 +7,10 @@
 
 body {
     font-family:  'Montserrat', sans-serif;
-    background-color: #fff;
+    background-color: #EDEDED;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 :root {
@@ -18,179 +19,237 @@ body {
     --Cinza: #707070;
 }
 
-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    border: 1px solid red;
-    height: 15%;
-    margin-bottom: 5%;
+a {
+    text-decoration: none;
+    color: var(--Preto);  
+}
+
+ul {
+    list-style-type: none;
+}
+
+main img {
+    width: 451px;
+    height: 451px;
+}
+
+
+
+
+
+/*** CABECALHO ***/
+
+header, main{
+    margin-bottom: 100px;
 }
 
 .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.links-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.links-nav li a{
+    font-size: 18px;
+    color: var(--Preto);
+    padding-bottom: 10px;
+}
+
+.links-nav li a:hover {
+    border-bottom: 2px solid var(--Vermelho);
+}
+
+.links-nav-2 a {
+    margin-right: 20px;
+}
+
+.links-nav-2 a:hover {
+    color: var(--Vermelho);
+}
+
+/*** FIM CABECALHO ***/
+
+
+
+
+
+
+/*** Parte Principal ***/
+
+main {
+    margin-bottom: 100px;
+}
+
+.fone {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
-.header .logo h1 img{
-    width: 80px;
-    height: 80px;
+.fone img {
+    animation: myAnim 15s ease-in 0s infinite normal forwards;
 }
 
-.header .links-nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-}
+@keyframes myAnim {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70% {
+      transform: translateY(-8px);
+    }
+  
+    20%,
+    40%,
+    60% {
+      transform: translateY(8px);
+    }
+  
+    80% {
+      transform: translateY(6.4px);
+    }
+  
+    90% {
+      transform: translateY(-6.4px);
+    }
+  }
 
-.header .links-nav a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--Preto);
-    padding: 5px;
-}
-
-.header .links-nav a:hover {
-    border-bottom: 2px solid var(--Vermelho);
-    transition: 0.2s;
-}
-
-.header .links-nav-2 {
-    display: flex;
-    flex-direction: row;
-}
-
-.header .links-nav-2 input {
-    width: 150px;
-    height: 20px;
+.descricao-fone {
+    width: 451px;
+    height: 451px;
     background-color: #fff;
-    border: 1px solid var(--Preto);
-    border-radius: 4px;
-    margin-right: 5px;
+    border: 1px solid #f1eded;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 1px #8f8f8f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.header .links-nav-2 label {
-    margin-right: 20px;
+.descricao-fone h2 {
+    color: var(--Vermelho);
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bolder;
 }
 
-.header .shop-nav a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
+.subtitulo-fone h3 {
     color: var(--Preto);
-    padding: 5px;
-    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
-main {
+.subtitulo-fone p {
+    color: var(--Vermelho);
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.subtitulo-fone span {
+    margin-right: 10px;
+}
+
+.especificacoes h3 {
+    color: var(--Preto);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.especificacao-1 {
+    margin-bottom: 20px;
+}
+
+.preco-compra {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5%;
-    border: 1px solid blue;
-    height: 60%;
+    width: 70%;
+    height: 70px;
 }
 
-main .fone {
-    margin: 0 20%;
-}
-
-main .fone .img-fone img {
-    width: 40%;
-    height: 40%;
-}
-
-main .fone {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-main .fone .descricao-fone {
-    width: 40%;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-main .fone .descricao-fone h2 {
+.preco-compra h3{
     font-size: 32px;
-    color: var(--Vermelho);
-    text-transform: uppercase;
-}
-
-main .fone .descricao-fone .subtitulo-fone h3 {
+    font-weight: bolder;
     color: var(--Preto);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 300px;
-    margin-bottom: 1%;
 }
 
-main .fone .descricao-fone .subtitulo-fone p {
-    color: var(--Vermelho);
-    font-weight: bold;
-}
-
-main .fone .descricao-fone .subtitulo-fone span {
-    margin-right: 20px;
-    padding: 10px;
-}
-
-main .fone .descricao-fone .especificacoes .especificacao-1 {
-    margin-bottom: 15px;
-}
-
-main .fone .descricao-fone .especificacoes  h3 {
-    color: var(--Preto);
-    font-weight: bold;
-}
-
-main .fone .descricao-fone .especificacoes p {
-    font-weight: 300;
-    color: var(--Cinza);
-}
-
-main .fone .descricao-fone .preco-compra {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-main .fone .descricao-fone .preco-compra h3 {
-    font-size: 32px;
-    color: var(--Preto);
-    margin-right: 40px;
-}
-
-main .fone .descricao-fone .preco-compra button {
-    width: 142px;
-    height: 32px;
+.preco-compra button {
+    height: 90%;
+    width: 50%;
     background-color: var(--Vermelho);
     color: #fff;
     font-size: 18px;
     text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
     border: 1px solid var(--Vermelho);
-    border-radius: 4px;
+    box-shadow: 5px 5px 10px 1px #2d2b2b;
+    cursor: pointer;
+    transition: 1s;
 }
 
+.preco-compra button:hover {
+    filter: brightness(150%);
+}
+
+/*** FIM PARTE PRINCIPAL ***/
+
+
+
+
+
+/*** RODAPE ***/
+
 footer {
+    background-color: #fff;
+}
+
+.rodape {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    border: 1px solid green;
-    height: 15%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box-f {
+    width: 20%;
+    height: 100px;
+    background-color: #EDEDED;
+    border: 1px solid #f1eded;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 1px #8f8f8f;
+}
+
+.box-f span {
+    color: var(--Preto);
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10%;  
 }
