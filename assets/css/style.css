@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family:  'Montserrat', sans-serif;
     background-color: #EDEDED;
@@ -29,8 +33,8 @@ ul {
 }
 
 main img {
-    width: 451px;
-    height: 451px;
+    width: 450px;
+    height: 450px;
 }
 
 
@@ -39,8 +43,9 @@ main img {
 
 /*** CABECALHO ***/
 
-header, main{
-    margin-bottom: 100px;
+header{
+    margin-bottom: 10%;
+    background-color: #EDEDED;
 }
 
 .header {
@@ -63,7 +68,7 @@ header, main{
 }
 
 .links-nav li a{
-    font-size: 18px;
+    font-size: 1.8rem;
     color: var(--Preto);
     padding-bottom: 10px;
 }
@@ -73,6 +78,7 @@ header, main{
 }
 
 .links-nav-2 a {
+    font-size: 1.8rem;
     margin-right: 20px;
 }
 
@@ -90,7 +96,8 @@ header, main{
 /*** Parte Principal ***/
 
 main {
-    margin-bottom: 100px;
+    margin-bottom: 10%;
+    background-color: #EDEDED;
 }
 
 .fone {
@@ -133,8 +140,8 @@ main {
   }
 
 .descricao-fone {
-    width: 451px;
-    height: 451px;
+    width: 450px;
+    height: 450px;
     background-color: #fff;
     border: 1px solid #f1eded;
     border-radius: 20px;
@@ -148,13 +155,13 @@ main {
 .descricao-fone h2 {
     color: var(--Vermelho);
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: bolder;
 }
 
 .subtitulo-fone h3 {
     color: var(--Preto);
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 10px;
 }
@@ -169,11 +176,21 @@ main {
     margin-right: 10px;
 }
 
+.especificacoes {
+    position: relative;
+    right: 25px;
+}
+
 .especificacoes h3 {
     color: var(--Preto);
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+.especificacoes p {
+    font-size: 1.2rem;
+    color: var(--Cinza);
 }
 
 .especificacao-1 {
@@ -190,17 +207,17 @@ main {
 }
 
 .preco-compra h3{
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: bolder;
     color: var(--Preto);
 }
 
 .preco-compra button {
-    height: 90%;
+    height: 70%;
     width: 50%;
     background-color: var(--Vermelho);
     color: #fff;
-    font-size: 18px;
+    font-size: 1.8rem;
     text-align: center;
     text-transform: uppercase;
     border-radius: 10px;
@@ -223,7 +240,8 @@ main {
 /*** RODAPE ***/
 
 footer {
-    background-color: #fff;
+    background-color: #EDEDED;
+    align-items: flex-end;
 }
 
 .rodape {
@@ -238,18 +256,19 @@ footer {
 .box-f {
     width: 20%;
     height: 100px;
-    background-color: #EDEDED;
-    border: 1px solid #f1eded;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px 1px #8f8f8f;
+    background-color: none;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.box-f span {
+.box-f h4 {
     color: var(--Preto);
-    font-size: 18px;
+    font-size: 2.0rem;
     font-weight: normal;
     text-align: center;
-    display: flex;
-    align-items: center;
-    margin-top: 10%;  
+    /*margin-top: 30px;*/
 }
