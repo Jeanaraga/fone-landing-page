@@ -228,7 +228,7 @@ main {
 }
 
 .preco-compra button:hover {
-    filter: brightness(150%);
+    background-color: var(--Preto);
 }
 
 /*** FIM PARTE PRINCIPAL ***/
