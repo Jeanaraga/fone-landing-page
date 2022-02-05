@@ -229,6 +229,7 @@ main {
 
 .preco-compra button:hover {
     background-color: var(--Preto);
+    border: 1px solid var(--Preto);
 }
 
 /*** FIM PARTE PRINCIPAL ***/
